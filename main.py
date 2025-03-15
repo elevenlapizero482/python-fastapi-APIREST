@@ -49,7 +49,6 @@ def actualizar_curso(curso_id:str, curso_actualizado:Curso):
     index = cursos_db.index(curso) # buscamos el indice exacto donde esta el curso en nuestra lista (DB)
     cursos_db[index] = curso_actualizado
     return curso_actualizado
-
 #CRUD: Delete (borrar) :Eliminaremos un curso que coincida con el ID que mandemos.
 @app.delete("/cursos/{curso_id}", response_model=Curso)
 def eliminar_curso(curso_id:str):
